@@ -9,7 +9,11 @@
     <% for(let i=0; i<orders.length; i++){%>
         <% let order = orders[i] %>
         <div>
-            
+            <p>Receiver Name: <%= order.receiverName%></p>
+            <p>Receiver Address: <%= order.toAddress %>, <%= order.toCity %></p>
+            <p>Shipping Price: $<%= order.shippingPrice %></p>
+            <p>Product: <%= order.productName %></p>
+            <p>Shipping date: <%= order.date %></p>
         </div>
     <%}%>
 </body>

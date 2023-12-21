@@ -1,4 +1,4 @@
-shippingPrices = {
+const shippingPrices = {
     Congo: {plane: {clothes: 50,
                     ceramics: 70,
                     phones: 120
@@ -23,3 +23,5 @@ shippingPrices = {
                     phones: 150}
                                         }
 }
+
+module.exports = shippingPrices
