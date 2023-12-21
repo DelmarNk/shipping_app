@@ -9,10 +9,22 @@
     <form action="">
         <input type="text" placeholder="product Name" name="productName">
         <input type="text" placeholder="Address To" name="toAddress">
-        <input type="text" placeholder="Country To" name="toCountry">
         <input type="text" placeholder="City To" name="toCity"> 
-        <input type="text" placeholder="Address From" name="fromAddress">
-        <input type="text" placeholder="Country from" name="formCountry">
+        <input type="text" placeholder="Address From" name="fromAddress"><br>
+        <label for="countryFrom">Where are you shipping from?</label>
+        <select name="countryFrom">
+            <option value="congo" selected>Congo Brazzaville</option>
+            <option value="france">France</option>
+            <option value="canada">Canada</option>
+        </select>
+        <br>
+        <label for="countryTo">Where are you shipping To?</label>
+        <select name="countryTo">
+            <option value="congo">Congo Brazzaville</option>
+            <option value="france" selected>France</option>
+            <option value="canada">Canada</option>
+        </select>
+        <br>
         <input type="text" placeholder="City from" name="fromCity">
         <input type="text" placeholder="Weight" name="weight">
         <input type="text" placeholder="Product value" name="productValue">
@@ -21,10 +33,10 @@
         <input type="text" placeholder="Sender Name" name="senderName">
         <input type="number" placeholder="Sender Phone Numver" name="senderPhoneNumber">
         <input type="text" placeholder="Date" name="date">
-        <p>Shipping method</p><input type="radio" name="shippingType" value="plane">plane
+        <p>Shipping method</p><input type="radio" name="shippingType" value="plane" checked>plane
         <input type="radio" name="shippingType" value="ocean">ocean
         <p>Product type</p>
-        <input type="radio" name="productType" value="clothes">clothes
+        <input type="radio" name="productType" value="clothes" checked>clothes
         <input type="radio" name="productType" value="ceramics">ceramics
         <input type="radio" name="productType" value="phones">phones <br>
         <button type="submit">submit</button>
