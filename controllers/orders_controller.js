@@ -1,9 +1,11 @@
 const express = require('express')
 const router = express.Router()
 
+const orders = require('../models/order_model.js')
 
 router.get('/', (req,res)=>{
-    res.render(`index.ejs`)
+    const data = {orders: orders}
+    res.render('all_orders.ejs', orders)
 })
 
 
