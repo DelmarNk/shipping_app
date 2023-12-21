@@ -13,5 +13,8 @@ router.get('/details/:id', (req,res)=>{
     res.render(`show.ejs`, data)
 })
 
+router.get('/new', (req,res)=>{
+    res.render('newOrder.ejs')
+})
 
 module.exports = router

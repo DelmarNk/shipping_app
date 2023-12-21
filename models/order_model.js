@@ -14,7 +14,8 @@ const orders = [
         receiverPhoneNumber: '123-456-1243',
         senderName: 'Jordan Smart',
         senderPhoneNumber: '572-120-1043',
-        date: '23-09-2021'
+        date: '23-09-2021',
+        
     }
 ]
 
