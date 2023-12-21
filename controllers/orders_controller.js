@@ -8,6 +8,10 @@ router.get('/', (req,res)=>{
     res.render('all_orders.ejs', data)
 })
 
+router.get('/details/:id', (req,res)=>{
+    const data = {order: orders[req.params.id]}
+    res.render(`show.ejs`, data)
+})
 
 
 module.exports = router

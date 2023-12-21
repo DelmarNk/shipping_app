@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>shippement details</title>
 </head>
 <body>
-    
+
+    <p>Receiver Name: <%= order.receiverName%></p>
+    <p>Receiver Address: <%= order.toAddress %>, <%= order.toCity %></p>
+    <p>Reiver Phone number: <%= order.receiverPhoneNumber%></p>
+    <p>Shipping Price: $<%= order.shippingPrice %></p>
+    <p>Product: <%= order.productName %></p>
+    <p>Sender name: <%= order.senderName %></p>
+    <p>Sender Phone number: <%= order.senderPhoneNumber %></p>
+    <p>Shipping address:<%= order.fromAddress %>, <%=order.formCountry %></p>
+    <p>Product weight: <%= order.weight %>kg</p>
+    <p>Product value: $<%= order.productValue %></p>
+    <p>Shipping date: <%= order.date %></p>
+    <p></p>
 </body>
 </html>

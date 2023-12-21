@@ -9,6 +9,7 @@
     <% for(let i=0; i<orders.length; i++){%>
         <% let order = orders[i] %>
         <div>
+            <a href="/orders/details/<%= i %>">More details</a>
             <p>Receiver Name: <%= order.receiverName%></p>
             <p>Receiver Address: <%= order.toAddress %>, <%= order.toCity %></p>
             <p>Shipping Price: $<%= order.shippingPrice %></p>
