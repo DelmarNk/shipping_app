@@ -7,7 +7,9 @@ const order_controller = require('./controllers/orders_controller')
 app.set('view engine', 'ejs')
 app.use('/orders', order_controller)
 
-
+app.get('/home', (req,res)=>{
+    res.render('index.ejs')
+})
 
 
 
