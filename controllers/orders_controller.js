@@ -29,7 +29,7 @@ router.post('/', (req, res)=>{
 })
 
 router.get('/edit/:id', (req,res)=>{
-    const data = {order: orders[req.params.id]}
+    const data = {order: orders[req.params.id], countries: Object.keys(prices)}
     res.render('edit.ejs', data)
 })
 router.put('/edit/:id', (req,res)=>{

@@ -13,20 +13,24 @@
         <input type="text" placeholder="Address From" name="fromAddress" value="<%= order.fromAddress %>"><br>
         <label for="fromCountry">Where are you shipping from?</label>
         <select name="fromCountry">
-            <option value="Congo" selected>Congo Brazzaville</option>
-            <option value="France">France</option>
-            <option value="Canada">Canada</option>
-            <option value="USA">United States of America</option>
-            <option value="China">China</option>
+            <% for(let i=0; i<countries.length; i++){ %>
+                <% if(countries[i] === order.fromCountry){ %>
+                    <option value="<%= countries[i] %>" selected><%= countries[i] %></option>
+                <% }else{ %>
+                    <option value="<%= countries[i] %>"><%= countries[i] %></option>
+                <% } %>
+            <% } %>
         </select>
         <br>
         <label for="toCountry">Where are you shipping To?</label>
         <select name="toCountry">
-            <option value="Congo">Congo Brazzaville</option>
-            <option value="France" selected>France</option>
-            <option value="Canada">Canada</option>
-            <option value="USA">United States of America</option>
-            <option value="China">China</option>
+            <% for(let i=0; i<countries.length; i++){ %>
+                <% if(countries[i] === order.toCountry){ %>
+                    <option value="<%= countries[i] %>" selected><%= countries[i] %></option>
+                <% }else{ %>
+                    <option value="<%= countries[i] %>"><%= countries[i] %></option>
+                <% } %>
+            <% } %>
         </select>
         <br>
         <input type="text" placeholder="City from" name="fromCity" value="<%= order.fromCity %>">
@@ -36,12 +40,24 @@
         <input type="text" placeholder="Receiver Phone Number" name="receiverPhoneNumber"  value="<%= order.receiverPhoneNumber %>" >
         <input type="text" placeholder="Sender Name" name="senderName"  value="<%= order.senderName %>">
         <input type="text" placeholder="Sender Phone Numver" name="senderPhoneNumber"  value="<%= order.senderPhoneNumber %>">
-        <p>Shipping method</p><input type="radio" name="shippingType" value="plane" checked>plane
-        <input type="radio" name="shippingType" value="ocean">ocean
+        <p>Shipping method</p>
+        <% if(order.shippingType === 'plane'){ %>
+            <input type="radio" name="shippingType" value="plane" checked>plane
+            <input type="radio" name="shippingType" value="ocean">ocean
+        <% }else{ %>
+            <input type="radio" name="shippingType" value="plane">plane
+            <input type="radio" name="shippingType" value="ocean" checked>ocean
+        <% } %>
         <p>Product type</p>
-        <input type="radio" name="productType" value="clothes" checked>clothes
-        <input type="radio" name="productType" value="ceramics">ceramics
-        <input type="radio" name="productType" value="phones">phones <br>
+        <% let types = ['clothes', 'ceramics', 'phones'] %>
+        <% for(let i = 0; i<types.length; i++){ %>
+            <% if(types[i] === order.productType){ %>
+                <input type="radio" name="productType" value="<%= types[i] %>" checked><%= types[i] %>
+            <% }else{ %>
+                <input type="radio" name="productType" value="<%= types[i] %>"><%= types[i] %> 
+            <% } %>
+        <% } %>
+        <br>
         <button type="submit">submit</button>
     </form>
     <a href="/orders/new">New order</a>
