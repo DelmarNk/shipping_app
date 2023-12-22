@@ -30,7 +30,7 @@ const shippingPrices = {
         ocean: {
                 clothes: 30,
                 ceramics: 60,
-                phones: 850
+                phones: 50
         }},
     USA: {
         plane: {
