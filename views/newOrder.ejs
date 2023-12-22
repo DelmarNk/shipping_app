@@ -6,33 +6,36 @@
     <title>new order</title>
 </head>
 <body>
-    <form action="">
+    <form action="/orders?_method=PUT" method="POST">
         <input type="text" placeholder="product Name" name="productName">
         <input type="text" placeholder="Address To" name="toAddress">
         <input type="text" placeholder="City To" name="toCity"> 
         <input type="text" placeholder="Address From" name="fromAddress"><br>
-        <label for="countryFrom">Where are you shipping from?</label>
-        <select name="countryFrom">
-            <option value="congo" selected>Congo Brazzaville</option>
-            <option value="france">France</option>
-            <option value="canada">Canada</option>
+        <label for="fromCountry">Where are you shipping from?</label>
+        <select name="fromCountry">
+            <option value="Congo" selected>Congo Brazzaville</option>
+            <option value="France">France</option>
+            <option value="Canada">Canada</option>
+            <option value="USA">United States of America</option>
+            <option value="China">China</option>
         </select>
         <br>
-        <label for="countryTo">Where are you shipping To?</label>
-        <select name="countryTo">
-            <option value="congo">Congo Brazzaville</option>
-            <option value="france" selected>France</option>
-            <option value="canada">Canada</option>
+        <label for="toCountry">Where are you shipping To?</label>
+        <select name="toCountry">
+            <option value="Congo">Congo Brazzaville</option>
+            <option value="France" selected>France</option>
+            <option value="Canada">Canada</option>
+            <option value="USA">United States of America</option>
+            <option value="China">China</option>
         </select>
         <br>
         <input type="text" placeholder="City from" name="fromCity">
         <input type="text" placeholder="Weight" name="weight">
         <input type="text" placeholder="Product value" name="productValue">
         <input type="text" placeholder="Receiver Name" name="receiverName">
-        <input type="number" placeholder="Receiver Phone Number" name="receiverPhoneNumber">
+        <input type="text" placeholder="Receiver Phone Number" name="receiverPhoneNumber">
         <input type="text" placeholder="Sender Name" name="senderName">
-        <input type="number" placeholder="Sender Phone Numver" name="senderPhoneNumber">
-        <input type="text" placeholder="Date" name="date">
+        <input type="text" placeholder="Sender Phone Numver" name="senderPhoneNumber">
         <p>Shipping method</p><input type="radio" name="shippingType" value="plane" checked>plane
         <input type="radio" name="shippingType" value="ocean">ocean
         <p>Product type</p>

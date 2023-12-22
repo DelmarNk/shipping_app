@@ -15,6 +15,8 @@ const orders = [
         senderName: 'Jordan Smart',
         senderPhoneNumber: '572-120-1043',
         date: '23-09-2021',
+        shippingType: 'plane',
+        productType: 'phones',
         
     },
     {
@@ -33,6 +35,8 @@ const orders = [
         senderName: 'Joe Smart',
         senderPhoneNumber: '572-120-1043',
         date: '14-06-2022',
+        shippingType: 'plane',
+        productType: 'phones',
         
     },
     {
@@ -51,6 +55,8 @@ const orders = [
         senderName: 'Lee William',
         senderPhoneNumber: '572-120-1043',
         date: '14-11-2022',
+        shippingType: 'plane',
+        productType: 'phones',
         
     },
     {
@@ -69,6 +75,8 @@ const orders = [
         senderName: 'Jordan Smart',
         senderPhoneNumber: '572-120-1043',
         date: '13-02-2023',
+        shippingType: 'plane',
+        productType: 'phones',
         
     },
     {
@@ -87,7 +95,8 @@ const orders = [
         senderName: 'Jordan Smart',
         senderPhoneNumber: '572-120-1043',
         date: '10-03-2023',
-        
+        shippingType: 'plane',
+        productType: 'phones',
     }
 ]
 
