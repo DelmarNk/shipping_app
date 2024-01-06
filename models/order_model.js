@@ -1,105 +1,30 @@
-const orders = [
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+
+const orderSchema = new Schema(
     {
-        productName: 'iPhone 14',
-        toAddress: '123 Home Street',
-        toCountry: 'Congo',
-        toCity: 'Kinshasa',
-        fromAddress: '567 Rose Drive',
-        fromCountry: 'Canada',
-        fromCity: 'Toronto',
-        weight: 0.45,
-        productValue: 729.00,
-        shippingPrice: 120,
-        receiverName: 'Delmar Smith',
-        receiverPhoneNumber: '123-456-1243',
-        senderName: 'Jordan Smart',
-        senderPhoneNumber: '572-120-1043',
-        date: '23-09-2021',
-        shippingType: 'plane',
-        productType: 'phones',
-        
+        productName: String,
+        toAddress: String,
+        toCountry: String,
+        toCity: String,
+        fromAddress: String,
+        fromCountry: String,
+        fromCity: String,
+        weight: Number,
+        productValue: Number,
+        shippingPrice: Number,
+        receiverName: String,
+        receiverPhoneNumber: String,
+        senderName: String,
+        senderPhoneNumber: String,
+        date: Date,
+        shippingType: String,
+        productType: String 
     },
-    {
-        productName: 'Chinese Tea Set',
-        toAddress: '12 Nanshi Jie',
-        toCountry: 'France',
-        toCity: 'Paris',
-        fromAddress: '23 King Street',
-        fromCountry: 'Canado',
-        fromCity: 'Toronto',
-        weight: 1.23,
-        productValue: 60.00,
-        shippingPrice: 50,
-        receiverName: 'Del Smith',
-        receiverPhoneNumber: '123-456-1243',
-        senderName: 'Joe Smart',
-        senderPhoneNumber: '572-120-1043',
-        date: '14-06-2022',
-        shippingType: 'plane',
-        productType: 'phones',
-        
-    },
-    {
-        productName: 'H&M T-Shirt',
-        toAddress: '123 Home Street',
-        toCountry: 'France',
-        toCity: 'Nice',
-        fromAddress: '567 Rose Drive',
-        fromCountry: 'Canada',
-        fromCity: 'Quebec',
-        weight: 0.45,
-        productValue: 15.00,
-        shippingPrice: 30,
-        receiverName: 'Travis Knight',
-        receiverPhoneNumber: '123-456-1243',
-        senderName: 'Lee William',
-        senderPhoneNumber: '572-120-1043',
-        date: '14-11-2022',
-        shippingType: 'plane',
-        productType: 'phones',
-        
-    },
-    {
-        productName: 'iPhone 15',
-        toAddress: '123 Home Street',
-        toCountry: 'Congo',
-        toCity: 'Kinshasa',
-        fromAddress: '567 Rose Drive',
-        fromCountry: 'USA',
-        fromCity: 'New York',
-        weight: 0.45,
-        productValue: 729.00,
-        shippingPrice: 120,
-        receiverName: 'Delmar Smith',
-        receiverPhoneNumber: '123-456-1243',
-        senderName: 'Jordan Smart',
-        senderPhoneNumber: '572-120-1043',
-        date: '13-02-2023',
-        shippingType: 'plane',
-        productType: 'phones',
-        
-    },
-    {
-        productName: 'Cooking Pot',
-        toAddress: '123 Home Street',
-        toCountry: 'Congo',
-        toCity: 'Kinshasa',
-        fromAddress: '567 Rose Drive',
-        fromCountry: 'USA',
-        fromCity: 'New York',
-        weight: 5.65,
-        productValue: 75.45,
-        shippingPrice: 50,
-        receiverName: 'Delmar Smith',
-        receiverPhoneNumber: '123-456-1243',
-        senderName: 'Jordan Smart',
-        senderPhoneNumber: '572-120-1043',
-        date: '10-03-2023',
-        shippingType: 'plane',
-        productType: 'phones',
-    }
-]
+)
+
+const Order = mongoose.model('Order', orderSchema)
 
 
 
-module.exports = orders
+module.exports = Order 
